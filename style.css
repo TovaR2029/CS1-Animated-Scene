@@ -22,8 +22,14 @@ body {
  height: 400px;
  margin: auto;
  border: 5px solid black;
- background-color: white;
+ background: url('ocean-2.jpg');
+ background-size: cover;
  overflow: hidden; /* contain objects "on-screen" */
 }
-
+#moana{
+    width: 200px;
+    height: 200px;
+    left: 200px;
+    top: 300px;
+}
 
