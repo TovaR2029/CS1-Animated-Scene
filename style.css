@@ -26,10 +26,45 @@ body {
  background-size: cover;
  overflow: hidden; /* contain objects "on-screen" */
 }
-#moana{
-    width: 200px;
+#moana {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 250px;
+    top: 180px;
+    z-index: 1;
+}
+#boat {
+    width: 500px;
+    height: 400px;
+    position: relative;
+    left: 150px;
+    bottom: 150px;
+}
+#wave {
+    width: 300px;
     height: 200px;
-    left: 200px;
-    top: 300px;
+    position: relative;
+    right: 10px;
+    bottom: 400px;
+    animation: wave 5s infinite ease-in-out;
+}
+#splash {
+    width: 150px;
+    height: 100px;
+    position: relative;
+    right: 290px;
+    bottom: 400px;
 }
 
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
