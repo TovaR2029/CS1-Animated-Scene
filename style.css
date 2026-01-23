@@ -33,8 +33,9 @@ body {
     left: 190px;
     top: 177px;
     animation: moana 5s infinite ease-in-out;
+    animation-fill-mode: backwards;
     display: inline-block;
-    z-index: 1;
+    z-index: 3;
 }
 #boat {
     width: 500px;
@@ -42,7 +43,8 @@ body {
     position: relative;
     left: 110px;
     bottom: 150px;
-    animation: boat 10s infinite ease-in-out
+    animation: boat 10s infinite ease-in-out;
+    z-index: 2;
 }
 #wave {
     width: 300px;
@@ -51,6 +53,7 @@ body {
     right: 0px;
     bottom: 400px;
     animation: wave 5s infinite ease-in-out;
+    animation-fill-mode: forwards;
     display: inline-block;
     z-index: 1;
 }
@@ -62,20 +65,29 @@ body {
     bottom: 400px;
     animation: splash 5s infinite ease-in;
     display: inline-block;
+    z-index: 2;
+}
+#wave-2 {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    left: 600px;
+    top: -550px;
+    animation: wave-2 5s infinite ease-in;
 }
 
 @keyframes wave {
     0% {
-        transform: rotate(-5deg);
+        transform: rotate(5deg);
     }
     25% {
-        transform: rotate(5deg);
+        transform: rotate(-5deg);
     }
     50% {
-        transform: rotate(5deg);
+        transform: rotate(-5deg);
     }
     100% {
-        transform: rotate(-5deg);
+        transform: rotate(5deg);
     }
 }
 
@@ -116,4 +128,15 @@ body {
         transform: rotate(-3deg);
     }
 }
+
+@keyframes wave-2 {
+    0% {
+        transform: translate(0px);
+    }
+    50% {
+        transform: translate(-150px);
+    }
+    100% {
+        transform: translate(-800px);
+    }
 }
