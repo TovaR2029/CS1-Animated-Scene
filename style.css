@@ -73,7 +73,24 @@ body {
     position: relative;
     left: 600px;
     top: -550px;
-    animation: wave-2 5s infinite ease-in;
+    animation: wave-2 6s infinite ease-in;
+}
+#chicken {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 110px;
+    bottom: 578px;
+    animation: chicken 5s infinite ease-in-out;
+    z-index: 3;
+}
+#splash-2 {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 350px;
+    top: 300px;
+    z-index: 3;
 }
 
 @keyframes wave {
@@ -140,3 +157,16 @@ body {
         transform: translate(-800px);
     }
 }
+
+@keyframes chicken {
+    0% {
+        transform: rotate(0deg) translate(0px);
+    }
+    50% {
+        transform: rotate(90deg) translate(150px);
+    }
+    100% {
+        transform: rotate(90deg) translate(200px);
+    }
+}
+
