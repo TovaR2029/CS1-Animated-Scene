@@ -79,7 +79,7 @@ body {
     position: relative;
     left: 110px;
     bottom: 578px;
-    animation: chicken 5s infinite ease-in-out;
+    animation: chicken 3.5s infinite ease-in-out;
     animation-fill-mode: backwards;
     z-index: 3;
 }
@@ -89,7 +89,7 @@ body {
     position: absolute;
     left: 450px;
     top: 400px;
-    animation: splash-2 5s infinite ease-in-out;
+    animation: splash-2 3.5s infinite ease-in-out;
     z-index: 3;
 }
 
