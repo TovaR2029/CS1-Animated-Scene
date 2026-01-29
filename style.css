@@ -33,7 +33,7 @@ body {
     left: 190px;
     top: 177px;
     animation: moana 5s infinite ease-in-out;
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
     display: inline-block;
     z-index: 3;
 }
@@ -53,7 +53,6 @@ body {
     right: 0px;
     bottom: 400px;
     animation: wave 5s infinite ease-in-out;
-    animation-fill-mode: forwards;
     display: inline-block;
     z-index: 1;
 }
@@ -63,9 +62,8 @@ body {
     position: relative;
     right: 250px;
     bottom: 400px;
-    animation: splash 5s infinite ease-in;
+    animation: splash 5s infinite ease-in-out;
     display: inline-block;
-    z-index: 2;
 }
 #wave-2 {
     width: 200px;
@@ -73,7 +71,7 @@ body {
     position: relative;
     left: 600px;
     top: -550px;
-    animation: wave-2 6s infinite ease-in;
+    animation: wave-2 5s infinite ease-in;
 }
 #chicken {
     width: 80px;
@@ -82,14 +80,16 @@ body {
     left: 110px;
     bottom: 578px;
     animation: chicken 5s infinite ease-in-out;
+    animation-fill-mode: backwards;
     z-index: 3;
 }
 #splash-2 {
-    width: 200px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    left: 350px;
-    top: 300px;
+    left: 450px;
+    top: 400px;
+    animation: splash-2 5s infinite ease-in-out;
     z-index: 3;
 }
 
@@ -118,16 +118,16 @@ body {
 
 @keyframes moana {
     0% {
-        transform: rotate(-7deg);
+        transform: rotate(7deg);
     }
     25% {
-        transform: rotate(7deg);
+        transform: rotate(-7deg);
     }
     50% {
-        transform: rotate(7deg);
+        transform: rotate(-7deg);
     }
     100% {
-        transform: rotate(-7deg);
+        transform: rotate(7deg);
     }
 }
 
@@ -150,9 +150,6 @@ body {
     0% {
         transform: translate(0px);
     }
-    50% {
-        transform: translate(-150px);
-    }
     100% {
         transform: translate(-800px);
     }
@@ -160,13 +157,17 @@ body {
 
 @keyframes chicken {
     0% {
-        transform: rotate(0deg) translate(0px);
-    }
-    50% {
-        transform: rotate(90deg) translate(150px);
+        transform: rotate(0deg) translate(0px); 
     }
     100% {
-        transform: rotate(90deg) translate(200px);
+        transform: rotate(90deg) translate(300px); 
     }
 }
+
+@keyframes splash-2 {
+    0% { transform: scale(0) translate( 0px, 100px); opacity: 0;}
+    50% { transform: scale(1);  opacity: 1;}
+    100% { transform: scale(0); opacity: 0;}
+}
+
 
