@@ -32,8 +32,7 @@ body {
     position: relative;
     left: 190px;
     top: 177px;
-    animation: moana 5s infinite ease-in-out;
-    animation-fill-mode: both;
+    animation: moana 5s infinite ease-out;
     display: inline-block;
     z-index: 3;
 }
@@ -52,7 +51,8 @@ body {
     position: relative;
     right: 0px;
     bottom: 400px;
-    animation: wave 5s infinite ease-in-out;
+    animation: wave 5s infinite ease-out;
+    animation-fill-mode: both;
     display: inline-block;
     z-index: 1;
 }
